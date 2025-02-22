@@ -818,43 +818,68 @@ html {
 
 
 
-
 .section-title, 
 .about-title, 
 .education-title, 
 .certification-title, 
-.contact-title,projects-heading {
+.contact-title, 
+.projects-heading {
     position: relative;
     display: inline-block;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: bold;
-    margin-bottom: 20px; /* Adjust space below the heading */
-    padding-bottom: 10px; /* Space between text and underline */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    color: #00c9a7; /* Adjust color based on theme */
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
+/* Elegant Underline Animation */
 .section-title::after, 
 .about-title::after, 
 .education-title::after, 
-.contact-title::after,
+.certification-title::after, 
+.contact-title::after, 
 .projects-heading::after {
     content: "";
     display: block;
-    width: 60px;
+    width: 100px;
     height: 4px;
     background: linear-gradient(90deg, #00e6b8, #0073e6);
-    margin: 10px auto 20px; /* Adjust spacing below the underline */
+    margin: 8px auto 0;
     border-radius: 2px;
-    box-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff;
-    animation: glow 1.5s infinite alternate;
+    transition: width 0.4s ease-in-out;
 }
 
-@keyframes glow {
+/* Hover Effect for More Interaction */
+.section-title:hover::after, 
+.about-title:hover::after, 
+.education-title:hover::after, 
+.certification-title:hover::after, 
+.contact-title:hover::after, 
+.projects-heading:hover::after {
+    width: 140px;
+}
+
+/* Soft Glow Effect */
+@keyframes softGlow {
     0% {
-        box-shadow: 0 0 5px #007bff, 0 0 10px #007bff;
+        text-shadow: 0 0 5px rgba(0, 230, 184, 0.4), 0 0 10px rgba(0, 115, 230, 0.4);
     }
     100% {
-        box-shadow: 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff;
+        text-shadow: 0 0 10px rgba(0, 230, 184, 0.7), 0 0 15px rgba(0, 115, 230, 0.7);
     }
+}
+
+/* Apply Glow Only When Needed */
+.section-title:hover, 
+.about-title:hover, 
+.education-title:hover, 
+.certification-title:hover, 
+.contact-title:hover, 
+.projects-heading:hover {
+    animation: softGlow 1.5s alternate infinite;
 }
 
 
@@ -1326,6 +1351,7 @@ html {
     .certification-item {
         width: 90%;
         padding: 0.9rem;
+        margin-left: 15px;
     }
     .certification-title {
         font-size: 1.5rem;
@@ -1352,6 +1378,7 @@ html {
     .certification-item {
         width: 95%;
         padding: 0.8rem;
+        margin-left: 8px;
     }
     .certification-title {
         font-size: 1.4rem;
@@ -1378,6 +1405,7 @@ html {
     .certification-item {
         width: 90%;
         padding: 0.7rem;
+        margin-left: 10px;
     }
     .certification-title {
         font-size: 1.3rem;

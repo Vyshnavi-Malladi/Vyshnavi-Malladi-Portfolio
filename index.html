@@ -211,7 +211,7 @@
                 <div class="timeline-content">
                     <h4>Bachelor of Technology in AI & ML</h4>
                     <p>Aditya Engineering College, Surampalem</p>
-                    <span class="timeline-year">2020 - 2026</span>
+                    <span class="timeline-year">2022 - 2026</span>
                 </div>
             </div>
             <div class="timeline-item">
@@ -248,7 +248,7 @@
                 <div class="timeline-content">
                     <h4>Full Stack Developer Intern</h4>
                     <p>Technical Hub, Surampalem</p>
-                    <span class="timeline-year">2024 - Present</span>
+                    <span class="timeline-year">June 2024 - Present</span>
                 </div>
             </div>
         </div>
@@ -267,7 +267,7 @@
             </div>
             <div class="project-content">
                 <h3 class="project-name">Faculty Feedback System</h3>
-                <p class="project-details">A web-based platform for students to provide feedback on faculty performance.</p>
+                <p class="project-details">A platform for students to provide feedback on faculty performance.</p>
                 <span class="project-tech">Java | JDBC | MySQL</span>
             </div>
         </div>
@@ -378,7 +378,7 @@ document.querySelectorAll('.project-box').forEach(box => {
       box.style.transform = '';
     });
   });
-  const roles = ["Full Stack Developer", "Web Developer"];
+  const roles = ["Full Stack Developer", "AI/ML Enthusiast"];
 let index = 0;
 let charIndex = 0;
 let typingElement = document.querySelector(".typing");
@@ -478,6 +478,28 @@ function toggleMenu() {
 
 
 
+
+
+
+
+
+
+
+
+    document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        const offset = 80; // Adjust based on navbar height
+
+        window.scrollTo({
+            top: targetSection.offsetTop - offset,
+            behavior: 'smooth'
+        });
+    });
+});
 
     
     </script>
